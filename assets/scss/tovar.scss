@@ -1,0 +1,86 @@
+//sass --watch scss/index.scss:css/style.css
+.product {
+    .color-group {
+        &>:not(.btn-check:first-child)+.btn {
+            margin-left: 10px;
+        }
+        label {
+            border-radius: 50% !important;
+            height: 27px;
+            width: 27px;
+        }
+    }
+    .size-group {
+        label {
+            border-radius: 0;
+        }
+    }
+
+    table {
+        text-align: center;
+        thead {
+            border-bottom: 1px solid $gray;
+        }
+        tbody {
+            border-width: 1px;
+            
+            td,th {
+                border:1px solid $gray;
+            }
+        }
+    }
+    
+    .accordion {
+        &-header {
+            --bs-accordion-active-bg: transparent;        
+        }
+        
+        &-button {
+            &::after {
+                filter: brightness(0);
+            }
+            h3 {
+                color: $black;
+            }
+            &:focus {
+                box-shadow: none;
+            }
+        }
+    }
+    .img-fluid {
+        object-fit: cover;
+        object-position: center;
+        transition: opacity 0.5s ease-in-out; /* добавляем transition */
+    }
+    .previews {
+        img {
+            cursor: pointer;            
+            transition: all 0.3s;
+            &:hover,&.active {
+                filter:brightness(0.7);
+                opacity: 1;
+            }
+        }
+    }
+}
+@media (max-width:768px) {
+    .tovar {
+        .cards {
+            h3 {
+                padding-left: 30px;
+            }
+            ul {
+                justify-content: center !important;
+            }
+        }
+
+    }
+}
+
+@media (max-width:516px) {
+    .tovar {
+        .card {
+            max-width: 350px;
+        }
+    }
+}

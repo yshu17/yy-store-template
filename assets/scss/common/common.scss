@@ -1,0 +1,171 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Crimson Pro', 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: $black;
+    min-width: 360px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-size: 54px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+section {
+    padding: 70px 0 0;
+}
+
+a {
+    text-decoration: none;
+    color: $gray;
+    transition: all 0.2s;
+
+    &:hover {
+        color: $black;
+        transition: all 0.2s;
+    }
+}
+
+input[type]:not([type="radio"]):not([type="checkbox"]):not([type="number"]) {
+
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid $black ;
+
+    &:focus {
+        
+        border-color: $black;
+        box-shadow: 0px 0px $black;
+        
+    }
+}
+
+select {
+    border: none !important;
+    border-radius: 0 !important;
+    border-bottom: 1px solid $black !important;
+
+    &:focus {
+        border-color: black !important;
+        box-shadow: 0px 0px $black !important; 
+    }
+    background-position: right 0.5rem bottom 0.7rem !important;
+    background-size: 16px 16px !important;
+}
+
+.form-check-input:checked {
+    background-color: $black;
+    border-color: $black;
+}
+.form-check-input:focus {
+    border-color: $gray;
+    box-shadow: none;
+}
+.form-check-input:checked[type=radio],.form-check-input:checked[type=checkbox] {
+    --bs-form-check-bg-image: none;
+}
+
+.link-btn {
+    font-size: 17px;
+}
+
+.heart-svg {
+    & path {
+        fill: black;
+        transition: all 0.4s;
+    }
+}
+
+// section.cards>ul>li.card
+.cards {            
+    .card {
+        max-width: 250px;
+        .card-img-top {
+            max-height: 350px;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+    }
+    .heart-wrapper {
+        .btn-check:checked+.btn {
+            background-color: rgba(255, 0, 0, 0.5);
+        }
+        label {
+            width: 32px;
+            height: 32px;
+            border: none;
+            border-radius: 50%;
+            .heart-svg {
+                transform: translateX(0.4px) translatey(2px);
+            }
+            &:hover {
+                .heart-svg path{
+                    fill: red;
+                    transition: all 0.4s;
+                }
+            }
+        }
+    }
+}
+
+.wish-wrapper>.btn, .cart-wrapper>.btn {
+    border-color: $black;
+    padding: 10px 30px;
+    &:hover {
+        border-color: $black ;
+        svg path {
+            fill: red;
+        }
+    }
+}
+
+.cart-wrapper>.btn { 
+    svg path {
+        transform: scale(0.8) translateX(25%) translateY(10%);
+    }
+}
+
+.wish-wrapper>.btn {
+    --bs-btn-active-bg: rgba(255, 0, 0, 0.5);
+}
+
+.quantity-wrapper {
+    input{ 
+        &:focus {
+            border-color: $black;
+            box-shadow: none;
+        }
+    }     
+}
+
+@media (max-width:768px) {
+    section {
+        padding: 40px 0 0;
+    }
+}
+@media (max-width:575px) {
+    section {
+        padding: 30px 0 0; 
+    }
+}

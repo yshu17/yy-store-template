@@ -1,0 +1,100 @@
+//=================HEADER==================//
+.header-main {
+    
+    .dropdown-menu {
+        min-width: 30rem;
+        &.show{
+            display: block;
+            animation: 0.5s show ease;
+        }
+        .product {
+            &__img {
+                width: 100px;
+                height: 150px;
+            }
+        }
+        .bucket-product-list {
+            max-height: 350px;
+            overflow-y: scroll;
+        }
+    }
+
+    .navbar {
+        padding: 0;
+        background-color: $white_2;
+        color: $black !important;
+        &-toggler {
+            border: none;
+            &:focus {
+                box-shadow: none;
+            }
+            &:hover svg path{
+                stroke: $gray;
+                transition: all 0.2s;
+            }
+        }
+    }
+
+    .nav-link {
+        padding: 0;
+        color: $black;
+        transition: all 0.2s;
+
+        &.active {
+            color: $white_2;
+        }
+
+        &.show {
+            color: $white_2;
+        }
+
+        &:hover {
+            color: $gray;
+            transition: all 0.2s;
+        }
+    }
+
+    .navbar-brand img {
+        min-width: 90px;
+        max-width: 150px;
+        width: 100%;
+    }
+
+    .bucket-link,
+    .serch-link {
+        transform: scale(0.8);
+        svg path {
+            fill: none;
+            stroke: $black;
+            transition: all 0.2s;
+        }
+
+        &:hover {
+            svg path {
+                fill: none;
+                stroke: $gray;
+                transition: all 0.2s;
+            }
+        }
+
+        &::after {
+            content: "";
+            display: none;
+        }
+
+    }
+
+    .logo-link {
+        margin: 0;
+        padding: 0;
+    }
+
+    .humburger-img path {
+        stroke:$black;
+        transition: all 0.2s;
+        
+    }
+
+
+    
+}

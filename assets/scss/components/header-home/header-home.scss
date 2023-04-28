@@ -1,0 +1,138 @@
+//=================HEADER==================//
+.header-home {
+    
+    .header__navmenu {
+        z-index: 999;
+        background-color: transparent;
+        transition: background-color 0.5s ease-in-out;
+        /* здесь можно изменить продолжительность и тип анимации */
+    }
+
+    .header__navmenu.scrolled {
+        background-color: $black;
+        /* здесь указывайте нужный вам цвет фона при скролле */
+    }
+
+    .dropdown-menu {
+        min-width: 20rem;
+        &.show{
+            display: block;
+            animation: 0.5s show ease;
+        }
+    }
+
+    .navbar {
+        padding: 0;
+        &-toggler {
+            border: none;
+            &:focus {
+                box-shadow: none;
+            }
+            &:hover svg path{
+                stroke: $gray;
+                transition: all 0.2s;
+            }
+        }
+    }
+
+    .nav-link {
+        padding: 0;
+        color: $white_1;
+        transition: all 0.2s;
+
+        &.active {
+            color: $white_2;
+        }
+
+        &.show {
+            color: $white_2;
+        }
+
+        &:hover {
+            color: $gray;
+            transition: all 0.2s;
+        }
+    }
+
+    .navbar-brand img {
+        min-width: 90px;
+        max-width: 150px;
+        width: 100%;
+    }
+
+    .bucket-link,
+    .serch-link {
+        transform: scale(0.8);
+        svg path {
+            fill: $white_1;
+            stroke: $white_1;
+            transition: all 0.2s;
+        }
+
+        &:hover {
+            svg path {
+                fill: $gray;
+                stroke: $gray;
+                transition: all 0.2s;
+            }
+        }
+
+        &::after {
+            content: "";
+            display: none;
+        }
+
+    }
+    .serch-link {
+        transform: scale(1);
+    }
+    .logo-link {
+        margin: 0;
+        padding: 0;
+    }
+
+    .humburger-img path {
+        stroke:$white_1;
+        transition: all 0.2s;
+        
+    }
+
+    //===========HERO===============/
+    .hero {
+        padding: 0;
+        position: relative;
+    
+        &-slider {
+            position: static !important;
+           
+        }
+    
+        &-content {
+            position: absolute;
+            display: block;
+            width: 100%;
+            z-index: 3;
+            top: 35%;
+            left: 0;
+            right: 0;
+        }
+    
+        .carousel-item {
+            height: 100vh;
+            &>img {
+                height: 100%;
+                object-fit: cover; 
+                object-position: right;
+            }
+        }
+        h1 {
+            margin-bottom: 100px;
+        }
+    
+        .vanta-canvas {
+            z-index: 1 !important;
+            opacity: 0.8;
+        }
+    }
+    
+}

@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../../../../../../../../Projects/YY-shop"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "YY-shop",
+		"liveServer.settings.ignoreFiles": [
+			".vscode/**",
+			"**/*.scss",
+			"**/*.sass",
+			"**/*.ts"
+		],
+		"editor.renderWhitespace": "selection",
+		"workbench.preferredDarkColorTheme": "Abyss",
+		"workbench.iconTheme": "vscode-icons",
+		"breadcrumbs.enabled": true
+	}
+}

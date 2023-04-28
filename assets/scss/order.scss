@@ -1,0 +1,14 @@
+//sass --watch scss/index.scss:css/style.css
+.order-details {
+    .bucket-product-list {
+        
+        max-height: 450px;
+        overflow-y: scroll;
+    }
+    .product {
+        &__img {
+            width: 100px;
+            height: 150px;
+        }
+    }
+}

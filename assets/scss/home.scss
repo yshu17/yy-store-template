@@ -1,0 +1,164 @@
+
+//=================MAIN=====================//
+.categories {
+    .card {
+        &-img {
+        border-radius: 0;
+
+        filter: brightness(0.6) saturate(0);
+        max-height: 350px;
+        object-fit: cover;
+        object-position: top;
+        transition: all 0.4s;
+        
+        }
+        &:hover {
+            .card-img {
+                filter: brightness(1);
+                transition: all 0.4s;
+                
+            }
+        }
+    }
+    .card-img-overlay {
+        top: auto
+    }
+  
+}
+
+.groups {
+    .col {
+        .card {
+            border: none;
+            border-radius: 0px;
+        }
+
+        .card-img {
+            border-radius: 0;
+            filter: brightness(0.6) saturate(0);
+            transition: all 0.4s;
+        }
+
+        &:hover {
+            .card-img {
+                filter: brightness(1);
+                transition: all 0.4s;
+            }
+        }
+
+        .card-img-overlay {
+            top: auto
+        }
+    }
+}
+
+.contact {
+    padding: 70px 0 ;
+    &__input {
+        border-bottom: 1px solid $gray !important;
+    }
+
+    &__btn {
+        border: none;
+        border-radius: 0;
+        border-bottom: 1px solid $gray;
+
+        &:hover {
+            background-color: transparent;
+            border-color: black;
+            box-shadow: 0px 1px $black;
+
+            &>svg>path {
+                stroke: $black;
+                transition: all 0.2s;
+            }
+
+            &>svg>circle {
+                fill: $black;
+                stroke: $black;
+                transition: all 0.2s;
+            }
+        }
+
+        &>svg {
+            width: 28px;
+            height: 28px;
+        }
+
+        &>svg>path {
+            stroke: $gray;
+            transition: all 0.2s;
+        }
+
+        &-gps>svg>path {
+            stroke: $gray;
+            fill: $gray;
+            transition: all 0.2s;
+        }
+
+        &-gps>svg>circle {
+            stroke: $gray;
+            fill: $gray;
+            transition: all 0.2s;
+        }
+
+        &-gps:hover {
+            &>svg>path {
+                stroke: $black;
+                fill: $black;
+                transition: all 0.2s;
+            }
+        }
+        &-arrow>svg>path {
+            transform: scale(0.8);
+            stroke: none;
+            transition: all 0.2s;
+        }
+        &-arrow:hover {
+            &>svg>path {
+                fill: black;
+                stroke: none;
+                transition: all 0.2s;
+            }
+        }
+    }
+
+    .col>a {
+        text-decoration: underline;
+    }
+}
+
+//====================MEDIA===================//
+
+@media (max-width:768px) {
+    section { 
+        &.contact {
+            padding: 40px 0 0; 
+        }
+    }
+    .contact { 
+        text-align: center; 
+        .input-group {
+            padding-inline: 20%;
+        }
+    }
+
+}
+@media (max-width:575px) {
+
+    section {  
+        &.contact {
+            padding: 30px 0 0; 
+        }
+    }
+
+    .groups .col .card-img-overlay {
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
+

@@ -1,0 +1,38 @@
+@media(max-width:991px) {
+    .header-home {
+
+        .offcanvas {
+            background-color: #212121 !important;
+    
+            &-backdrop.show {
+                opacity: 0.3;
+            }
+        }
+        .offcanvas-body__main-content {
+            
+            overflow: visible;
+            padding-inline: 30px ;
+            .logo-link {
+                display: none;
+            }
+            & ul {
+                flex-direction: row;
+            }
+            .dropdown-menu {
+                position: absolute;
+            }
+        }
+    }
+}
+
+@media (max-width:400px) {
+
+    .header-home {
+
+        .offcanvas-body__main-content {
+            .dropdown-menu {
+                min-width: 15rem;
+            }
+        }
+    }
+}

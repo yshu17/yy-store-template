@@ -1,0 +1,84 @@
+
+//===============Main==========//
+
+.filters { 
+    .row>* {
+        width: auto !important;
+        flex: auto !important;
+    }
+    .col {
+        flex:none !important;
+    }
+    .btn-group {
+        gap: 35px 0px;
+        justify-content: center;
+        & label {
+            transition: all 0.2s;
+            border-radius: 0;
+        }
+
+    }
+    form {
+        border-top: 1px solid $gray;
+        ul li {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 10px;
+        }
+        button[type=reset] { 
+            background-color: transparent;
+            border: none;
+            transition: all 0.2s;
+            &:hover {
+                color: $gray;
+                transition: all 0.2s;
+            }
+        }
+        .form__inner {
+            
+            border-bottom: 1px solid $gray
+        }
+
+    }
+}
+.cards {
+    padding: 30px 0 0;  
+}
+.pagination {
+    color: $black;
+    &-next {
+        transform: scale(0.5);
+    }
+    &-prev {
+        transform: scale(0.5) rotate(180deg);
+    }
+    .active>.page-link, .page-link.active {
+        color: $black;
+        background-color: $gray;
+        border-color: transparent;
+    }
+    .page-link {
+        color: $black;
+        transition: all 0.2s;
+        &:focus {
+            background-color: transparent;
+            background-color: $white_2;
+            outline: 0;
+            box-shadow: none;
+        }
+        &:hover {
+            background-color: $white_2;
+            transition: all 0.2s;
+        }
+    }
+}
+
+//======Media=====//
+@media(max-width: 516px) {
+    .catalog {
+        .card {
+            max-width: 350px;
+        }
+    }
+}
