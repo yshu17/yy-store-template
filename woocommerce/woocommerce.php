@@ -15,7 +15,7 @@
  * @return void
  */
 function yy_store_woocommerce_scripts() {
-	wp_enqueue_style( 'yy-store-woocommerce-style', get_template_directory_uri() . '/woocommerce.css', array(), _S_VERSION );
+	wp_enqueue_style( 'yy-store-woocommerce-style', get_template_directory_uri() . '/woocommerce/woocommerce.css', array(), _S_VERSION );
 
 	$font_path   = WC()->plugin_url() . '/assets/fonts/';
 	$inline_font = '@font-face {
