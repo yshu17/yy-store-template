@@ -1,0 +1,7 @@
+.product {
+    .price {
+        & .woocommerce-Price-currencySymbol {
+            font-size: 28px;
+        }
+    }
+}

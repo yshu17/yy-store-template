@@ -60,6 +60,13 @@ input[type]:not([type="radio"]):not([type="checkbox"]):not([type="number"]) {
     }
 }
 
+input[type=number] {
+    &:focus {
+        border-color: $black;
+        box-shadow: none;
+    }
+}
+
 select {
     border: none !important;
     border-radius: 0 !important;

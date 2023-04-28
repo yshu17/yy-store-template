@@ -135,3 +135,18 @@ function yy_store_woocommerce_product_conent_end() {
 		</div> <!-- <div class="row row-gap-3">-->
 	<?php
 }
+
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 7 );
+
+add_action( 'woocommerce_before_add_to_cart_quantity', 'yy_store_woocommerce_quantity_and_button_div_start', 5 );
+function yy_store_woocommerce_quantity_and_button_div_start() {
+	?>
+		<div class="d-flex flex-wrap align-items-center gap-2 my-sm-5 button-group">		
+	<?php
+}
+add_action( 'woocommerce_after_add_to_cart_button', 'yy_store_woocommerce_quantity_and_button_div_end', 5 );
+function yy_store_woocommerce_quantity_and_button_div_end() {
+	?>	
+		</div> <!-- <div class="d-flex flex-wrap align-items-center gap-2 my-sm-5 button-group"> -->
+	<?php
+}

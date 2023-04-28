@@ -15,6 +15,12 @@ global $product;
 	<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 
 	<?php
+	/*
+		* Hook: woocommerce_before_add_to_cart_quantity
+		*
+		* Hooked: yy_store_woocommerce_quantity_and_button_div_start - 5
+		*
+		*/
 	do_action( 'woocommerce_before_add_to_cart_quantity' );
 
 	woocommerce_quantity_input(
@@ -27,10 +33,23 @@ global $product;
 
 	do_action( 'woocommerce_after_add_to_cart_quantity' );
 	?>
+	<div class="cart-wrapper">
+		<button type="submit" class="btn btn-dark d-flex justify-content-center align-items-center gap-1 <?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>">
+			<img class="svg me-2" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/icons-svg/teenyicons_bag-outline_white.svg" alt="">
+			<h4 class="m-0 p-0 d-inline-block">add to cart</h4>
+		</button>
+	</div>
 
-	<button type="submit" class="single_add_to_cart_button button alt<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
-
-	<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
+	<?php 
+		/*
+		* Hook: woocommerce_after_add_to_cart_button
+		*
+		* Hooked: yy_store_woocommerce_quantity_and_button_div_end - 5
+		*
+		*/
+	
+		do_action( 'woocommerce_after_add_to_cart_button' ); 
+	?> 
 
 	<input type="hidden" name="add-to-cart" value="<?php echo absint( $product->get_id() ); ?>" />
 	<input type="hidden" name="product_id" value="<?php echo absint( $product->get_id() ); ?>" />
