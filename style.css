@@ -697,6 +697,20 @@ select:focus {
 .product .accordion-button:focus {
   box-shadow: none;
 }
+.product .accordion .accordion-body {
+  max-height: 120px;
+  overflow-y: scroll;
+}
+.product .accordion .accordion-body::-webkit-scrollbar {
+  width: 5px;
+  background-color: #E8E9EB;
+  border-radius: 5px;
+  height: 200px;
+}
+.product .accordion .accordion-body::-webkit-scrollbar-thumb {
+  background: #212121;
+  border-radius: 5px;
+}
 .product .img-fluid {
   object-fit: cover;
   object-position: center;
@@ -711,6 +725,12 @@ select:focus {
   opacity: 1;
 }
 
+@media (max-width: 992px) {
+  .accordion .accordion-body {
+    max-height: none !important;
+    overflow-y: auto !important;
+  }
+}
 @media (max-width: 768px) {
   .tovar .cards h3 {
     padding-left: 30px;

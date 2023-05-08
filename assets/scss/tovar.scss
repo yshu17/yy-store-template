@@ -52,6 +52,21 @@
                 box-shadow: none;
             }
         }
+        & .accordion-body {
+            max-height: 120px;
+            overflow-y: scroll;
+            &::-webkit-scrollbar {
+                width: 5px;
+                background-color: $white_2;
+                border-radius: 5px;
+                height: 200px;
+            }
+            
+            &::-webkit-scrollbar-thumb {
+                background: $black ;
+                border-radius: 5px;
+            }
+        }
     }
     .img-fluid {
         object-fit: cover;
@@ -69,6 +84,16 @@
         }
     }
 }
+
+@media (max-width:992px) { 
+    .accordion {
+        & .accordion-body {
+            max-height: none !important;
+            overflow-y: auto !important;
+        }
+    }
+}
+
 @media (max-width:768px) {
     .tovar {
         .cards {

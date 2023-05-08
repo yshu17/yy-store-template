@@ -56,6 +56,7 @@ if ( post_password_required() ) {
 		 * @hooked woocommerce_template_single_add_to_cart - 30
 		 * @hooked woocommerce_template_single_sharing - 50
 		 * @hooked WC_Structured_Data::generate_product_data() - 60
+		 * @hooked woocommerce_output_product_data_tabs - 70  	// added from woocommerce_after_single_product_summary
 		 */
 		do_action( 'woocommerce_single_product_summary' );
 		?>
@@ -65,7 +66,7 @@ if ( post_password_required() ) {
 	/**
 	 * Hook: woocommerce_after_single_product_summary.
 	 *
-	 * @hooked woocommerce_output_product_data_tabs - 10
+	 * @hooked woocommerce_output_product_data_tabs - 10  // removed from this action and added into woocommerce_single_product_summary
 	 * @hooked woocommerce_upsell_display - 15
 	 * @hooked woocommerce_output_related_products - 20
 	 */

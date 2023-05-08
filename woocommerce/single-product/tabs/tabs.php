@@ -31,6 +31,71 @@ $product_tabs = apply_filters( 'woocommerce_product_tabs', array() );
 if ( ! empty( $product_tabs ) ) : ?>
 
 	<div class="woocommerce-tabs wc-tabs-wrapper">
+		<!-- <div class="accordion accordion-flush" id="accordionFlushExample">
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button"
+						data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+						aria-expanded="false" aria-controls="flush-collapseOne">
+						<h3 class="text-lowercase m-0 p-0">description</h3>
+					</button>
+				</h2>
+				<div id="flush-collapseOne" class="accordion-collapse collapse show"
+					data-bs-parent="#accordionFlushExample">
+					<div class="accordion-body">
+						<p>
+							In porttitor hac amet morbi. Semper lacus erat suspendisse porta
+							tincidunt. Sed enim euismod nulla nec a posuere nunc arcu rutrum. Augue
+							condimentum tortor iaculis dictum potenti scelerisque dolor massa. Netus
+							bibendum nibh vivamus a pharetra est adipiscing. Facilisis sed tortor
+							quis id nisi ipsum nec.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button"
+						data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+						aria-expanded="false" aria-controls="flush-collapseTwo">
+						<h3 class="text-lowercase m-0 p-0">delivery</h3>
+					</button>
+				</h2>
+				<div id="flush-collapseTwo" class="accordion-collapse collapse"
+					data-bs-parent="#accordionFlushExample">
+					<div class="accordion-body">Placeholder content for this accordion, which is
+						intended to demonstrate the <code>.accordion-flush</code> class. This is the
+						second item's accordion body. Let's imagine this being filled with some
+						actual content.</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button"
+						data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+						aria-expanded="false" aria-controls="flush-collapseThree">
+						<h3 class="text-lowercase m-0 p-0">care of t-shirt</h3>
+					</button>
+				</h2>
+				<div id="flush-collapseThree" class="accordion-collapse collapse"
+					data-bs-parent="#accordionFlushExample">
+					<div class="accordion-body">
+						<p> How to clean and care for a T-Shirt so it lasts longer: summary</p>
+						<ul>
+							<li>Wash less</li>
+							<li>Wash with similar colours</li>
+							<li>Wash cold</li>
+							<li>Wash (and dry) inside out</li>
+							<li>Use the right (amount of) detergents</li>
+							<li>Do not tumble dry</li>
+							<li>Iron on reverse</li>
+							<li>Store correctly</li>
+							<li>Treat stains immediately!</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div> -->
 		<ul class="tabs wc-tabs" role="tablist">
 			<?php foreach ( $product_tabs as $key => $product_tab ) : ?>
 				<li class="<?php echo esc_attr( $key ); ?>_tab" id="tab-title-<?php echo esc_attr( $key ); ?>" role="tab" aria-controls="tab-<?php echo esc_attr( $key ); ?>">

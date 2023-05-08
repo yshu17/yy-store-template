@@ -28,7 +28,7 @@ $columns = apply_filters('woocommerce_product_thumbnails_columns', 4);
 $post_thumbnail_id = $product->get_image_id();
 $wrapper_classes = apply_filters('woocommerce_single_product_image_gallery_classes', array());
 ?>
-<div class="main-img d-flex flex-row-reverse gap-1">
+<div class="main-img d-flex flex-row-reverse gap-1 justify-content-center">
 	<img class="img-fluid w-75" src="<?php echo wp_get_attachment_url($post_thumbnail_id); ?>" alt="">
 	<div class="row gap-1 w-25 previews">
 		<?php

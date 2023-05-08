@@ -125,13 +125,13 @@ function yy_store_woocommerce_product_image_end() {
 add_action( 'woocommerce_before_single_product_summary', 'yy_store_woocommerce_product_conent_start', 30 );
 function yy_store_woocommerce_product_conent_start() {
 	?>
-		 <div class="col-lg-6 p-0 ps-3">		
+		 <div class="col-lg-6 p-0 ps-sm-3">		
 	<?php
 }
 add_action( 'woocommerce_after_single_product_summary', 'yy_store_woocommerce_product_conent_end', 5 );
 function yy_store_woocommerce_product_conent_end() {
 	?>
-			</div> <!--  <div class="col-lg-6 p-0 ps-3">-->
+			</div> <!--  <div class="col-lg-6 p-0 ps-sm-3">-->
 		</div> <!-- <div class="row row-gap-3">-->
 	<?php
 }
@@ -139,13 +139,13 @@ function yy_store_woocommerce_product_conent_end() {
 add_action( 'woocommerce_before_add_to_cart_quantity', 'yy_store_woocommerce_quantity_and_button_div_start', 5 );
 function yy_store_woocommerce_quantity_and_button_div_start() {
 	?>
-		<div class="d-flex flex-wrap align-items-center gap-2 my-sm-5 button-group">		
+		<div class="d-flex flex-wrap align-items-center gap-2 my-sm-4 button-group">		
 	<?php
 }
 add_action( 'woocommerce_after_add_to_cart_button', 'yy_store_woocommerce_quantity_and_button_div_end', 5 );
 function yy_store_woocommerce_quantity_and_button_div_end() {
 	?>	
-		</div> <!-- <div class="d-flex flex-wrap align-items-center gap-2 my-sm-5 button-group"> -->
+		</div> <!-- <div class="d-flex flex-wrap align-items-center gap-2 my-sm-4 button-group"> -->
 	<?php
 }
 
