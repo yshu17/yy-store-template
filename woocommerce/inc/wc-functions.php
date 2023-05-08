@@ -136,8 +136,6 @@ function yy_store_woocommerce_product_conent_end() {
 	<?php
 }
 
-add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 7 );
-
 add_action( 'woocommerce_before_add_to_cart_quantity', 'yy_store_woocommerce_quantity_and_button_div_start', 5 );
 function yy_store_woocommerce_quantity_and_button_div_start() {
 	?>
@@ -150,3 +148,11 @@ function yy_store_woocommerce_quantity_and_button_div_end() {
 		</div> <!-- <div class="d-flex flex-wrap align-items-center gap-2 my-sm-5 button-group"> -->
 	<?php
 }
+
+/**
+ *  Reconnecting hooks. All changes must be duplicated in wp-function-remove.php
+ *  1. Переподключили хук , поставили его на 7 приоретет
+ *  2. Переключили хук с одного события на другое и задали проретет 70
+ */
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 7 );      	//1
+add_action( 'woocommerce_single_product_summary', 'woocommerce_output_product_data_tabs', 70 ); 	//2
