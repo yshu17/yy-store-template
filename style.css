@@ -670,6 +670,9 @@ select:focus {
 .product .size-group label {
   border-radius: 0;
 }
+.product .quantity .form-control {
+  max-width: 5rem;
+}
 .product table {
   text-align: center;
 }
@@ -732,6 +735,23 @@ select:focus {
 
 .product .price .woocommerce-Price-currencySymbol {
   font-size: 28px;
+}
+.product .cfvsw-swatches-container[swatches-attr=attribute_pa_size] {
+  gap: 15px;
+}
+.product .cfvsw-swatches-container[swatches-attr=attribute_pa_size] .cfvsw-selected-swatch {
+  color: #FFFFFF;
+  background-color: #212121;
+}
+.product .cfvsw-swatches-container[swatches-attr=attribute_pa_size] div {
+  min-width: 50px !important;
+  border: 1px solid #212121;
+  padding: 3px 10px !important;
+  font-size: 18px;
+}
+.product .cfvsw-swatches-container[swatches-attr=attribute_pa_size] div div {
+  padding: 0;
+  border: none;
 }
 
 /*# sourceMappingURL=style.css.map */

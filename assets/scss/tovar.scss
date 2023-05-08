@@ -15,6 +15,12 @@
             border-radius: 0;
         }
     }
+    
+    .quantity {
+        .form-control {
+            max-width: 5rem;
+        }
+    }
 
     table {
         text-align: center;

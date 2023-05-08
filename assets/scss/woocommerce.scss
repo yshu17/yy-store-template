@@ -4,4 +4,21 @@
             font-size: 28px;
         }
     }
+    .cfvsw-swatches-container[swatches-attr="attribute_pa_size"] { 
+        gap: 15px;
+        .cfvsw-selected-swatch {
+            color: $white_1;
+            background-color: $black;
+        }
+        & div {
+            min-width: 50px !important;
+            border: 1px solid $black;
+            padding: 3px 10px !important;
+            font-size: 18px;
+            & div {
+                padding: 0;
+                border: none;
+            }
+        }
+    }
 }
